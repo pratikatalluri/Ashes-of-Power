@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceqortmmk5flu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o3jxj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0f027"]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="player1" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("BoxMesh_o3jxj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/player1"]
+shape = SubResource("BoxShape3D_0f027")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_direction = 3
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.38, 0.07979999, 0.07979999, 1)

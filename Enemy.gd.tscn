@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bcwrclq1q86wu"]
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(24, 24)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)

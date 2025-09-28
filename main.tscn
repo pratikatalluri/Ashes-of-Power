@@ -1,3 +1,41 @@
-[gd_scene load_steps=0 format=3 uid="uid://cwvilai86ovae"]
+[gd_scene load_steps=4 format=3 uid="uid://eyguydxqakw0"]
 
-[node name="Node" type="Node"]
+[ext_resource type="Script" uid="uid://u2k35i7er21" path="res://Enemy.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bjlxvlpqg5oto" path="res://EnemySpawner.gd" id="2_h2yge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+
+[node name="MainNode" type="Node2D"]
+
+[node name="Floor" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1882353, 0.039215688, 0.039215688, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_0xm2m")
+
+[node name="PlayerVisual" type="ColorRect" parent="Player"]
+custom_minimum_size = Vector2(32, 32)
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 24.0
+offset_bottom = 24.0
+color = Color(0.18, 0.18, 0.18, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+scale = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="InvulTimer" type="Timer" parent="Player"]
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+script = ExtResource("2_h2yge")
+
+[connection signal="timeout" from="Player/InvulTimer" to="Player" method="_on_invul_timer_timeout"]
