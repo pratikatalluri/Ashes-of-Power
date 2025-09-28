@@ -25,8 +25,8 @@ func _physics_process(delta):
 	# --- MOVEMENT ---
 	var dir = Vector2.ZERO
 	# W/S move along the Y-axis (Up/Down)
-	if Input.is_action_pressed("move_up"): dir.y -= 1
 	if Input.is_action_pressed("move_down"): dir.y += 1
+	if Input.is_action_pressed("move_up"): dir.y -= 1
 	# A/D move along the X-axis (Left/Right)
 	if Input.is_action_pressed("move_left"): dir.x -= 1
 	if Input.is_action_pressed("move_right"): dir.x += 1
