@@ -91,4 +91,5 @@ func enemy_died():
 			print("Wave %d cleared!" % current_wave)
 			enemies_per_wave += 2 # Increase difficulty
 			await get_tree().create_timer(3.0).timeout # 3 second break
-			start_next_wave()its no
+			start_next_wave()
+			

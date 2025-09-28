@@ -106,3 +106,8 @@ func take_damage(amount):
 	if health <= 0:
 		print("GAME OVER")
 		get_tree().quit() # Simple exit for hackathon
+
+func _process(delta):
+	var player = get_node("/root/MainNode/Player")
+	var direction = (player.global_position - global_position).normalized()
+	position += direction * speed * delta
