@@ -16,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1882353, 0.039215688, 0.039215688, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
@@ -23,14 +24,6 @@ zoom = Vector2(0.5, 0.5)
 [node name="Player" type="CharacterBody2D" parent="."]
 slide_on_ceiling = false
 script = ExtResource("1_0xm2m")
-
-[node name="PlayerVisual" type="ColorRect" parent="Player"]
-custom_minimum_size = Vector2(32, 32)
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 24.0
-offset_bottom = 24.0
-color = Color(0.18, 0.18, 0.18, 1)
 
 [node name="InvulTimer" type="Timer" parent="Player"]
 
