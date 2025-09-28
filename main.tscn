@@ -19,6 +19,7 @@ color = Color(0.1882353, 0.039215688, 0.039215688, 1)
 zoom = Vector2(0.5, 0.5)
 
 [node name="Player" type="CharacterBody2D" parent="."]
+slide_on_ceiling = false
 script = ExtResource("1_0xm2m")
 
 [node name="PlayerVisual" type="ColorRect" parent="Player"]
